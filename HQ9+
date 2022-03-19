@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+int main(){
+    string p;
+    getline(cin,p);
+    int l, count=0;
+    l=p.size();
+    for(int i=0;i<l;i++){
+        if(p[i]>=36 and p[i]<=126){
+            if(p[i]=='H' or p[i]=='Q' or p[i]=='9') count++;
+            else count;
+        }
+    }
+    if(count!=0) cout<<"YES"<<endl;
+    else cout<<"NO"<<endl;
+    return 0;
+}
