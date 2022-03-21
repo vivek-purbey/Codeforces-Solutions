@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    string t, s;
+    int count=0;
+    cin>>t>>s;
+    reverse(s.begin(), s.end());//reverse given last string
+    for(int i=0;i<t.size();i++){
+        if(t[i]==s[i]) count++;//compare both string letter one by one
+        else count;
+    }
+    if(count==t.size()) cout<<"YES";
+    else cout<<"NO"<<endl;
+    return 0;
+}
