@@ -1,0 +1,15 @@
+#include<iostream>
+#include<set>
+using namespace std;
+int main(){
+    string str;
+    cin>>str;
+    set<char>s; //declare set
+    for(int i=0;i<str.size();i++){
+        s.insert(str[i]); //pass string each character in set because set store unique values
+    }
+    int n=s.size(); //store set of size in a variable
+    if(n%2==0) cout<<"CHAT WITH HER!"; //applying condition
+    else cout<<"IGNORE HIM!";
+    return 0;
+}
