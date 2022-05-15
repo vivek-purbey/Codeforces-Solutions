@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+int main(){
+	int n; cin>>n; int a[n], c_ev=0, c_od=0;
+	for(int i=1;i<=n;i++){
+	    cin>>a[i]; if(a[i]%2==0) c_ev++; else c_od++;
+	}
+	if(c_ev>c_od){
+	    for(int i=1;i<=n;i++){
+	        if(a[i]%2!=0){
+	            cout<<i;
+	            break;
+	        }
+	    }
+	}
+	else{
+	    for(int i=1;i<=n;i++){
+	        if(a[i]%2==0){
+	            cout<<i;
+	            break;
+	        }
+	    }
+	}
+	return 0;
+}
