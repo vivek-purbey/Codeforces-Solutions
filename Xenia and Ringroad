@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    long long int m,n,i,s=0,v=1;
+    cin>>n>>m;
+    long long int a[m+9];
+    for(i=0; i<m; i++)
+        cin>>a[i];
+    for(i=0; i<m; i++)
+    {
+        if(a[i]>v)
+        {
+            s+=a[i]-v;
+            v=a[i];
+        }
+        else if(a[i]<v)
+        {
+            s+=n-v+a[i];
+            v=a[i];
+        }
+    }
+    cout<<s<<endl;
+}
